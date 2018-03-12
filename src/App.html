@@ -1,4 +1,40 @@
-<h1>Hello {{$name}}!</h1>
+{{#if $currentPage === routes.EMPTY }}
+<Empty></Empty>
+{{/if}}
+
+{{#if $currentPage === routes.LOGIN }}
+<Login></Login>
+{{/if}}
+
+{{#if $currentPage === routes.SPINNER }}
+<Spinner></Spinner>
+{{/if}}
+
+{{#if $currentPage === routes.MAIN }}
+<Main></Main>
+{{/if}}
+
+<script>
+  import { routes } from './constants/index'
+  import Empty from './pages/Empty.html'
+  import Login from './pages/Login.html'
+  import Spinner from './pages/Spinner.html'
+  import Main from './pages/Main.html'
+
+  export default {
+    components: {
+      Empty,
+      Login,
+      Spinner,
+      Main
+    },
+    data() {
+      return {
+        routes
+      }
+    }
+  }
+</script>
 
 <style>
 	h1 {

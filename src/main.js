@@ -1,5 +1,4 @@
 import App from './App.html'
-
 import store from './store'
 
 const app = new App({
